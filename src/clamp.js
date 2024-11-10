@@ -16,14 +16,14 @@
 //. 'Z'
 //. ```
 
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a} = makeTypeVars ({a: 0});
 
-export default def
+export default $.def
   ('clamp')
   ({a: [Z.Ord]})
   ([a, a, a, a])

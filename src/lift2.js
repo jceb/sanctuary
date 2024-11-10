@@ -34,15 +34,14 @@
 //. {x: 'Hello.', y: 'Hello?'}
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, c, f} = makeTypeVars ({a: 0, b: 0, c: 0, f: 1});
 
-export default def
+export default $.def
   ('lift2')
   ({f: [Z.Apply]})
   ([$.Fn (a) ($.Fn (b) (c)), f (a), f (b), f (c)])

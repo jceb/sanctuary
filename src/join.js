@@ -31,14 +31,14 @@
 //. 'abcabc'
 //. ```
 
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, m} = makeTypeVars ({a: 0, m: 1});
 
-export default def
+export default $.def
   ('join')
   ({m: [Z.Chain]})
   ([m (m (a)), m (a)])

@@ -1,10 +1,8 @@
 import * as FL from 'fantasy-land';
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import show from 'sanctuary-show';
 import * as Z from 'sanctuary-type-classes';
 import type from 'sanctuary-type-identifiers';
-
-import config from 'sanctuary/config';
 
 export {Sum};
 
@@ -25,7 +23,7 @@ Sum.Type = $.NullaryType
   ([])
   (x => type (x) === sumTypeIdent);
 
-config.env.push (Sum.Type);
+$.config.env.push (Sum.Type);
 
 Sum[FL.empty] = () => Sum (0);
 

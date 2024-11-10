@@ -7,15 +7,14 @@
 //. [Pair ('a') (1), Pair ('b') (2), Pair ('c') (3)]
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Pair_ from 'sanctuary-pair';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a} = makeTypeVars ({a: 0});
 
-export default def
+export default $.def
   ('pairs')
   ({})
   ([$.StrMap (a), $.Array ($.Pair ($.String) (a))])

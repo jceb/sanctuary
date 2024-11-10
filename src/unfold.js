@@ -15,14 +15,13 @@
 //. [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b} = makeTypeVars ({a: 0, b: 0});
 
-export default def
+export default $.def
   ('unfold')
   ({})
   ([$.Fn (b) ($.Maybe ($.Pair (a) (b))), b, $.Array (a)])

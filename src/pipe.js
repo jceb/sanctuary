@@ -12,15 +12,14 @@
 //. 9
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, f} = makeTypeVars ({a: 0, b: 0, f: 1});
 
-export default def
+export default $.def
   ('pipe')
   ({f: [Z.Foldable]})
   ([f ($.Fn ($.Any) ($.Any)), a, b])

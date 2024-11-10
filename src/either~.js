@@ -15,14 +15,13 @@
 //. '42'
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, c} = makeTypeVars ({a: 0, b: 0, c: 0});
 
-export default def
+export default $.def
   ('either')
   ({})
   ([$.Fn (a) (c), $.Fn (b) (c), $.Either (a) (b), c])

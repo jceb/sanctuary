@@ -11,15 +11,14 @@
 //. Right (1)
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Either from 'sanctuary-either';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a} = makeTypeVars ({a: 0});
 
-export default def
+export default $.def
   ('tagBy')
   ({})
   ([$.Predicate (a), a, $.Either (a) (a)])

@@ -18,14 +18,14 @@
 //. Just ([1, 2, 3])
 //. ```
 
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, f} = makeTypeVars ({a: 0, f: 1});
 
-export default def
+export default $.def
   ('append')
   ({f: [Z.Applicative, Z.Semigroup]})
   ([a, f (a), f (a)])

@@ -22,12 +22,10 @@
 //. '<[Just ("foo"), Just ("bar")]>'
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Maybe from 'sanctuary-maybe';
 
-import def from './internal/def.js';
-
-export default def
+export default $.def
   ('replace')
   ({})
   ([$.Fn ($.Array ($.Maybe ($.String))) ($.String),

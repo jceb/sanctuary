@@ -20,15 +20,15 @@
 //. Nothing
 //. ```
 
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 import TypeRep from './internal/TypeRep.js';
 
 const {a, f, t} = makeTypeVars ({a: 0, f: 1, t: 1});
 
-export default def
+export default $.def
   ('sequence')
   ({f: [Z.Applicative], t: [Z.Traversable]})
   ([TypeRep (f (a)), t (f (a)), f (t (a))])

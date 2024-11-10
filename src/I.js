@@ -8,13 +8,14 @@
 //. 'foo'
 //. ```
 
-import def from './internal/def.js';
+import * as $ from 'sanctuary-def';
+
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a} = makeTypeVars ({a: 0});
 
-export default
-def ('I')
-    ({})
-    ([a, a])
-    (x => x);
+export default $.def
+  ('I')
+  ({})
+  ([a, a])
+  (x => x);

@@ -20,13 +20,12 @@
 //. Nothing
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Maybe from 'sanctuary-maybe';
 
-import def from './internal/def.js';
 import Radix from './internal/Radix.js';
 
-export default def
+export default $.def
   ('parseInt')
   ({})
   ([Radix, $.String, $.Maybe ($.Integer)])

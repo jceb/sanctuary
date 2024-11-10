@@ -12,17 +12,16 @@
 //. ['oo!', 'oo?', 'on!', 'on?', 'no!', 'no?', 'nn!', 'nn?']
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import either from './either~.js';
 import TypeRep from './internal/TypeRep.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, m} = makeTypeVars ({a: 0, b: 0, m: 1});
 
-export default def
+export default $.def
   ('chainRec')
   ({m: [Z.ChainRec]})
   ([TypeRep (m (b)), $.Fn (a) (m ($.Either (a) (b))), a, m (b)])

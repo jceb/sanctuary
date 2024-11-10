@@ -26,15 +26,14 @@
 //. Cons (1) (Cons (2) (Nil))
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, f} = makeTypeVars ({a: 0, b: 0, f: 1});
 
-export default def
+export default $.def
   ('flip')
   ({f: [Z.Functor]})
   ([f ($.Fn (a) (b)), a, f (b)])

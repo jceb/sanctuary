@@ -13,15 +13,14 @@
 //. Just (3)
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, f, m} = makeTypeVars ({a: 0, b: 0, f: 1, m: 1});
 
-export default def
+export default $.def
   ('pipeK')
   ({f: [Z.Foldable], m: [Z.Chain]})
   ([f ($.Fn ($.Any) (m ($.Any))), m (a), m (b)])

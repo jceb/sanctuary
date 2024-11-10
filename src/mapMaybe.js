@@ -13,16 +13,15 @@
 //. {x: 1, z: 4}
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 import justs from './justs.js';
 
 const {a, b, f} = makeTypeVars ({a: 0, b: 0, f: 1});
 
-export default def
+export default $.def
   ('mapMaybe')
   ({f: [Z.Filterable, Z.Functor]})
   ([$.Fn (a) ($.Maybe (b)), f (a), f (b)])

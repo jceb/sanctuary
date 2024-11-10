@@ -14,17 +14,16 @@
 //. [Pair (1) (2), Pair (3) (4)]
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Pair_ from 'sanctuary-pair';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 import zipWith from './zipWith.js';
 
 const {a, b} = makeTypeVars ({a: 0, b: 0});
 
-export default
-def ('zip')
-    ({})
-    ([$.Array (a), $.Array (b), $.Array ($.Pair (a) (b))])
-    (zipWith (Pair_));
+export default $.def
+  ('zip')
+  ({})
+  ([$.Array (a), $.Array (b), $.Array ($.Pair (a) (b))])
+  (zipWith (Pair_));

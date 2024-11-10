@@ -10,16 +10,15 @@
 //. ['foo', 'bar']
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 import isLeft from './isLeft.js';
 
 const {a, b, f} = makeTypeVars ({a: 0, b: 0, f: 1});
 
-export default def
+export default $.def
   ('lefts')
   ({f: [Z.Filterable, Z.Functor]})
   ([f ($.Either (a) (b)), f (a)])

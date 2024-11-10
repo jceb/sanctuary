@@ -14,12 +14,10 @@
 //. Nothing
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Maybe from 'sanctuary-maybe';
 
-import def from './internal/def.js';
-
-export default def
+export default $.def
   ('stripPrefix')
   ({})
   ([$.String, $.String, $.Maybe ($.String)])

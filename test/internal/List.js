@@ -1,12 +1,10 @@
 import assert from 'node:assert';
 
 import * as FL from 'fantasy-land';
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import show from 'sanctuary-show';
 import Z from 'sanctuary-type-classes';
 import type from 'sanctuary-type-identifiers';
-
-import config from 'sanctuary/config';
 
 export {Nil, Cons};
 
@@ -35,7 +33,7 @@ List.Type = $.UnaryType
   (x => type (x) === listTypeIdent)
   (list => list);
 
-config.env.push (List.Type ($.Unknown));
+$.config.env.push (List.Type ($.Unknown));
 
 //    Nil :: List a
 const Nil = List.Nil = new _List ('Nil');

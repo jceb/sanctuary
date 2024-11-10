@@ -13,14 +13,13 @@
 //. 832040
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a} = makeTypeVars ({a: 0});
 
-export default def
+export default $.def
   ('fromMaybe_')
   ({})
   ([$.Thunk (a), $.Maybe (a), a])

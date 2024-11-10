@@ -11,13 +11,10 @@
 //. false
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import config from './config.js';
-import def from './internal/def.js';
-
-export default def
+export default $.def
   ('is')
   ({})
   ([$.Type, $.Any, $.Boolean])
-  ($.test (config.env));
+  ($.test);

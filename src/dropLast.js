@@ -21,16 +21,15 @@
 //. Just (Cons (1) (Nil))
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 import drop from './drop.js';
 
 const {a, f} = makeTypeVars ({a: 0, f: 1});
 
-export default def
+export default $.def
   ('dropLast')
   ({f: [Z.Applicative, Z.Foldable, Z.Monoid]})
   ([$.Integer, f (a), $.Maybe (f (a))])

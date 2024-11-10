@@ -18,15 +18,14 @@
 //. Nothing
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Maybe from 'sanctuary-maybe';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a} = makeTypeVars ({a: 0});
 
-export default def
+export default $.def
   ('value')
   ({})
   ([$.String, $.StrMap (a), $.Maybe (a)])

@@ -1,7 +1,7 @@
 import {deepStrictEqual as eq} from 'node:assert';
 
 import test from 'oletus';
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
 import * as S from 'sanctuary';
 import is from 'sanctuary/is';

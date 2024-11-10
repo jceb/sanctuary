@@ -15,14 +15,14 @@
 //. 10
 //. ```
 
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, c, s} = makeTypeVars ({a: 0, b: 0, c: 0, s: 2});
 
-export default def
+export default $.def
   ('compose')
   ({s: [Z.Semigroupoid]})
   ([s (b) (c), s (a) (b), s (a) (c)])

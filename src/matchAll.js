@@ -15,12 +15,10 @@
 //. [[Just ('foo')], [Just ('bar')], [Just ('baz')]]
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Maybe from 'sanctuary-maybe';
 
-import def from './internal/def.js';
-
-export default def
+export default $.def
   ('matchAll')
   ({})
   ([$.GlobalRegExp, $.String, $.Array ($.Array ($.Maybe ($.String)))])

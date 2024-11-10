@@ -14,15 +14,14 @@
 //. Right (64)
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, c, p} = makeTypeVars ({a: 0, b: 0, c: 0, p: 2});
 
-export default def
+export default $.def
   ('mapLeft')
   ({p: [Z.Bifunctor]})
   ([$.Fn (a) (b), p (a) (c), p (b) (c)])

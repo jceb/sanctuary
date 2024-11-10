@@ -10,7 +10,7 @@ import type from 'sanctuary/type';
 test ('type', () => {
 
   eq (S.type === type, true);
-  eq (String (S.type), 'type :: Any -> { name :: String, namespace :: Maybe String, version :: NonNegativeInteger }');
+  eq (String (S.type), 'type :: Any -> { namespace :: Maybe String, name :: String, version :: NonNegativeInteger }');
 
   // eslint-disable-next-line prefer-rest-params
   eq (S.type (function() { return arguments; } ()),

@@ -11,10 +11,8 @@
 //. Nothing
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Maybe from 'sanctuary-maybe';
-
-import def from './internal/def.js';
 
 //  requiredNonCapturingGroup :: Array String -> String
 const requiredNonCapturingGroup = xs => (
@@ -50,7 +48,7 @@ const validFloatRepr = new RegExp (
   '$'                       // end-of-string anchor
 );
 
-export default def
+export default $.def
   ('parseFloat')
   ({})
   ([$.String, $.Maybe ($.Number)])

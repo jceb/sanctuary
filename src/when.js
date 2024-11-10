@@ -14,14 +14,13 @@
 //. -1
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a} = makeTypeVars ({a: 0});
 
-export default def
+export default $.def
   ('when')
   ({})
   ([$.Predicate (a), $.Fn (a) (a), a, a])

@@ -7,12 +7,10 @@
 //. 2
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
-
-export default
-def ('add')
-    ({})
-    ([$.FiniteNumber, $.FiniteNumber, $.FiniteNumber])
-    (x => y => x + y);
+export default $.def
+  ('add')
+  ({})
+  ([$.FiniteNumber, $.FiniteNumber, $.FiniteNumber])
+  (x => y => x + y);

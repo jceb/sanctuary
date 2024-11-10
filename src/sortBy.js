@@ -41,15 +41,14 @@
 //. [121, 117, 116, 114, 110, 99, 97, 97, 83]
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, m} = makeTypeVars ({a: 0, b: 0, m: 1});
 
-export default def
+export default $.def
   ('sortBy')
   ({b: [Z.Ord], m: [Z.Applicative, Z.Foldable, Z.Monoid]})
   ([$.Fn (a) (b), m (a), m (a)])

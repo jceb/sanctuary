@@ -24,12 +24,10 @@
 //. Just ([Just ('example.com'), Just ('8888')])
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Maybe from 'sanctuary-maybe';
 
-import def from './internal/def.js';
-
-export default def
+export default $.def
   ('match')
   ({})
   ([$.NonGlobalRegExp, $.String, $.Maybe ($.Array ($.Maybe ($.String)))])

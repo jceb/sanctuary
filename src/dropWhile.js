@@ -13,14 +13,13 @@
 //. [3, 3, 3, 7, 6, 3, 5, 4]
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a} = makeTypeVars ({a: 0});
 
-export default def
+export default $.def
   ('dropWhile')
   ({})
   ([$.Predicate (a), $.Array (a), $.Array (a)])

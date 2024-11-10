@@ -14,21 +14,20 @@
 //. [[1, 2], [3, 4]]
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, c} = makeTypeVars ({a: 0, b: 0, c: 0});
 
-export default
-def ('zipWith')
-    ({})
-    ([$.Fn (a) ($.Fn (b) (c)), $.Array (a), $.Array (b), $.Array (c)])
-    (f => xs => ys => {
-       const result = new Array (Math.min (xs.length, ys.length));
-       for (let idx = 0; idx < result.length; idx += 1) {
-         result[idx] = f (xs[idx]) (ys[idx]);
-       }
-       return result;
-     });
+export default $.def
+  ('zipWith')
+  ({})
+  ([$.Fn (a) ($.Fn (b) (c)), $.Array (a), $.Array (b), $.Array (c)])
+  (f => xs => ys => {
+     const result = new Array (Math.min (xs.length, ys.length));
+     for (let idx = 0; idx < result.length; idx += 1) {
+       result[idx] = f (xs[idx]) (ys[idx]);
+     }
+     return result;
+   });

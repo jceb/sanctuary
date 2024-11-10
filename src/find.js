@@ -14,17 +14,16 @@
 //. Nothing
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Maybe from 'sanctuary-maybe';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 import findMap from './findMap.js';
 
 const {a, f} = makeTypeVars ({a: 0, f: 1});
 
-export default def
+export default $.def
   ('find')
   ({f: [Z.Foldable]})
   ([$.Predicate (a), f (a), $.Maybe (a)])

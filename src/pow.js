@@ -10,11 +10,9 @@
 //. [1, 2, 3, 4, 5]
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
-
-export default def
+export default $.def
   ('pow')
   ({})
   ([$.FiniteNumber, $.FiniteNumber, $.FiniteNumber])

@@ -20,11 +20,9 @@
 //. ['foo', 'bar', 'baz']
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
-
-export default def
+export default $.def
   ('splitOnRegex')
   ({})
   ([$.GlobalRegExp, $.String, $.Array ($.String)])

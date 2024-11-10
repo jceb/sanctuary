@@ -10,16 +10,15 @@
 //. Left (new SyntaxError ('Unexpected end of JSON input'))
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Either from 'sanctuary-either';
 
-import def from './internal/def.js';
 import Throwing from './internal/Throwing.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b, e} = makeTypeVars ({a: 0, b: 0, e: 0});
 
-export default def
+export default $.def
   ('encase')
   ({})
   ([Throwing (e) (a) (b), a, $.Either (e) (b)])

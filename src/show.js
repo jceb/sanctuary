@@ -16,12 +16,10 @@
 //. 'Left (Right (Just (Nothing)))'
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import show from 'sanctuary-show';
 
-import def from './internal/def.js';
-
-export default def
+export default $.def
   ('show')
   ({})
   ([$.Any, $.String])

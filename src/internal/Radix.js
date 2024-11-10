@@ -1,4 +1,4 @@
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
 export default $.NullaryType
   ('Radix')

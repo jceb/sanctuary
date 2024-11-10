@@ -17,14 +17,14 @@
 //. [4, 3, 2, 1]
 //. ```
 
+import * as $ from 'sanctuary-def';
 import Z from 'sanctuary-type-classes';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, w} = makeTypeVars ({a: 0, w: 1});
 
-export default def
+export default $.def
   ('duplicate')
   ({w: [Z.Extend]})
   ([w (a), w (w (a))])

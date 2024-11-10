@@ -1,4 +1,4 @@
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import show from 'sanctuary-show';
 
 //  Throwing :: Type -> Type -> Type -> Type

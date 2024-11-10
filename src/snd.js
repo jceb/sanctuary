@@ -7,15 +7,14 @@
 //. 42
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 import Pair_ from 'sanctuary-pair';
 
-import def from './internal/def.js';
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b} = makeTypeVars ({a: 0, b: 0});
 
-export default def
+export default $.def
   ('snd')
   ({})
   ([$.Pair (a) (b), b])

@@ -183,7 +183,7 @@
     "test": "npm run lint && sanctuary-test && npm run doctest"
   },
   "dependencies": {
-    "sanctuary-def": "0.22.0",
+    "sanctuary-def": "sanctuary-js/sanctuary-def#9c506edee76773b024e3b364ef47bcee629004ad",
     "sanctuary-either": "2.1.0",
     "sanctuary-maybe": "2.1.0",
     "sanctuary-pair": "2.1.0",

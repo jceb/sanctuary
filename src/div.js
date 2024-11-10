@@ -8,11 +8,9 @@
 //. [0, 0.5, 1, 1.5]
 //. ```
 
-import $ from 'sanctuary-def';
+import * as $ from 'sanctuary-def';
 
-import def from './internal/def.js';
-
-export default def
+export default $.def
   ('div')
   ({})
   ([$.NonZeroFiniteNumber, $.FiniteNumber, $.FiniteNumber])

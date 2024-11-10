@@ -11,13 +11,14 @@
 //. [42, 42, 42, 42, 42]
 //. ```
 
-import def from './internal/def.js';
+import * as $ from 'sanctuary-def';
+
 import makeTypeVars from './internal/makeTypeVars.js';
 
 const {a, b} = makeTypeVars ({a: 0, b: 0});
 
-export default
-def ('K')
-    ({})
-    ([a, b, a])
-    (x => y => x);
+export default $.def
+  ('K')
+  ({})
+  ([a, b, a])
+  (x => y => x);
