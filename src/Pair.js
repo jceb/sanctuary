@@ -9,7 +9,7 @@
 //. ```
 
 import * as $ from 'sanctuary-def';
-import Pair_ from 'sanctuary-pair';
+import * as Pair_ from 'sanctuary-pair';
 
 import makeTypeVars from './internal/makeTypeVars.js';
 
@@ -19,4 +19,4 @@ export default $.def
   ('Pair')
   ({})
   ([a, b, $.Pair (a) (b)])
-  (Pair_);
+  (Pair_.Pair);

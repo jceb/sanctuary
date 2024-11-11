@@ -18,8 +18,8 @@
 //. ```
 
 import * as $ from 'sanctuary-def';
-import Maybe from 'sanctuary-maybe';
-import Z from 'sanctuary-type-classes';
+import * as Maybe from 'sanctuary-maybe';
+import * as Z from 'sanctuary-type-classes';
 
 import makeTypeVars from './internal/makeTypeVars.js';
 

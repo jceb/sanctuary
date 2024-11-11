@@ -11,8 +11,8 @@
 //. ```
 
 import * as $ from 'sanctuary-def';
-import Maybe from 'sanctuary-maybe';
-import type from 'sanctuary-type-identifiers';
+import * as Maybe from 'sanctuary-maybe';
+import {identifierOf, parseIdentifier} from 'sanctuary-type-identifiers';
 
 export default $.def
   ('type')
@@ -26,7 +26,7 @@ export default $.def
        namespace,
        name,
        version,
-     } = type.parse (type (x));
+     } = parseIdentifier (identifierOf (x));
      return {
        namespace: namespace == null ? Maybe.Nothing : Maybe.Just (namespace),
        name,

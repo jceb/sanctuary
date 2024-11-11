@@ -8,7 +8,7 @@
 //. ```
 
 import * as $ from 'sanctuary-def';
-import Pair_ from 'sanctuary-pair';
+import * as Pair_ from 'sanctuary-pair';
 
 import makeTypeVars from './internal/makeTypeVars.js';
 
@@ -18,4 +18,4 @@ export default $.def
   ('pairs')
   ({})
   ([$.StrMap (a), $.Array ($.Pair ($.String) (a))])
-  (sm => (Object.entries (sm)).map (([key, val]) => Pair_ (key) (val)));
+  (sm => (Object.entries (sm)).map (([key, val]) => Pair_.Pair (key) (val)));

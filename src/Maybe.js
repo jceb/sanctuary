@@ -2,4 +2,4 @@
 //.
 //. Maybe [type representative][].
 
-export {default} from 'sanctuary-maybe';
+export {Maybe as default} from 'sanctuary-maybe';

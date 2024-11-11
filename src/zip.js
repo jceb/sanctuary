@@ -15,7 +15,7 @@
 //. ```
 
 import * as $ from 'sanctuary-def';
-import Pair_ from 'sanctuary-pair';
+import * as Pair_ from 'sanctuary-pair';
 
 import makeTypeVars from './internal/makeTypeVars.js';
 import zipWith from './zipWith.js';
@@ -26,4 +26,4 @@ export default $.def
   ('zip')
   ({})
   ([$.Array (a), $.Array (b), $.Array ($.Pair (a) (b))])
-  (zipWith (Pair_));
+  (zipWith (Pair_.Pair));

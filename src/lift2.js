@@ -35,7 +35,7 @@
 //. ```
 
 import * as $ from 'sanctuary-def';
-import Z from 'sanctuary-type-classes';
+import * as Z from 'sanctuary-type-classes';
 
 import makeTypeVars from './internal/makeTypeVars.js';
 

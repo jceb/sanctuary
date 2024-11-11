@@ -2,4 +2,4 @@
 //.
 //. Either [type representative][].
 
-export {default} from 'sanctuary-either';
+export {Either as default} from 'sanctuary-either';

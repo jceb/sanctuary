@@ -24,7 +24,7 @@
 //. ```
 
 import * as $ from 'sanctuary-def';
-import Maybe from 'sanctuary-maybe';
+import * as Maybe from 'sanctuary-maybe';
 
 import makeTypeVars from './internal/makeTypeVars.js';
 

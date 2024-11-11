@@ -8,7 +8,7 @@
 //. ```
 
 import * as $ from 'sanctuary-def';
-import Pair_ from 'sanctuary-pair';
+import * as Pair_ from 'sanctuary-pair';
 
 import makeTypeVars from './internal/makeTypeVars.js';
 

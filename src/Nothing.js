@@ -7,6 +7,6 @@
 //. Nothing
 //. ```
 
-import Maybe from 'sanctuary-maybe';
+import * as Maybe from 'sanctuary-maybe';
 
 export default Maybe.Nothing;

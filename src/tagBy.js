@@ -12,7 +12,7 @@
 //. ```
 
 import * as $ from 'sanctuary-def';
-import Either from 'sanctuary-either';
+import * as Either from 'sanctuary-either';
 
 import makeTypeVars from './internal/makeTypeVars.js';
 
